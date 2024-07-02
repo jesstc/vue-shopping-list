@@ -7,7 +7,9 @@
             <div class="card-body">
               <h5 class="card-title">{{ product.name }}</h5>
               <p class="card-text">{{ product.price }} 元</p>
-              <button class="btn btn-primary" @click="addToCart(product)">加入購物車</button>
+              <button class="btn btn-primary" @click="addToCart(product)">
+                <i class="bi bi-cart"></i> 加入購物車
+              </button>
             </div>
           </div>
         </div>
@@ -16,7 +18,6 @@
   </template>
   
   <script>
-  // import { ref } from 'vue';
   
   export default {
     props: {
