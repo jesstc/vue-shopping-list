@@ -9,11 +9,12 @@
               <h5 class="card-title">{{ product.name }}</h5>
               <p class="card-text">
                 團購主： {{ product.owner }}
-                <br><br>
+              </p>
+              <span class="d-flex justify-content-between align-items-center">
                 <span class="badge text-bg-danger">團購價：${{ product.price }} </span>
                 <CounterBtn @ChangeNum="changeNum(product.id, $event)" :productNum=initial_counts[index] />
-              </p>
-              <button class="btn btn-primary" @click="addToCart(product, initial_counts[index])">
+              </span>
+              <button class="btn btn-primary text-nowrap w-100" @click="addToCart(product, initial_counts[index])">
                 <i class="bi bi-cart"></i> 加入購物車
               </button>
             </div>
