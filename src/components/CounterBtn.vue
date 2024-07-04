@@ -20,7 +20,7 @@ export default defineComponent({
         const localProductNum = ref(productNum.value);
 
         const changeQantity = (increase_decrease) => {
-            (localProductNum.value > 0 || increase_decrease > 0) && 
+            (localProductNum.value > 1 || increase_decrease > 0) && 
                 (localProductNum.value += increase_decrease);
             emit("ChangeNum", localProductNum.value);
         };
