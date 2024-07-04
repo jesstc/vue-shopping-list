@@ -1,15 +1,15 @@
 <template>
   <div class="container">
-    <h1 class="my-4">Vue 3 商店</h1>
+    <h1 class="my-4">ABC 團購網</h1>
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-lg-8">
         <ProductList
           :products="products"
           :addToCart="addToCart"
           @ProductNumChange="handleProductNumChange"
         />
       </div>
-      <div class="col-md-4">
+      <div class="col-lg-4">
         <ShoppingCart 
           :cart="cart"
           @RemoveId="removeFromCart"
@@ -32,9 +32,9 @@ export default {
   },
   setup() {
     const products = ref([
-      { id: 1, name: '商品1', price: 100 },
-      { id: 2, name: '商品2', price: 200 },
-      { id: 3, name: '商品3', price: 300 },
+      { id: 1, name: "英日韓中翻譯筆【旗艦版】", pic_url: 'translate-pen.jpeg', owner: '滴妹', price: 100 },
+      { id: 2, name: "AI 英文學習機", pic_url: 'english-learning-machine.jpeg', owner: '阿滴英文', price: 200 },
+      { id: 3, name: "o'rest 歐瑞思側睡記憶枕", pic_url: '486-good-pillow.jpeg', owner: '豬豬隊友', price: 300 },
     ]);
 
     const cart = reactive([]);
@@ -76,7 +76,3 @@ export default {
   }
 };
 </script>
-
-<style>
-/* 添加自定義樣式 */
-</style>
