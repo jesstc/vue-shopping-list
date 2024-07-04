@@ -1,10 +1,8 @@
 <template>
-    <div class="p-2 align-self-center">
-        <span class="input-group mb-3">
-            <button class="btn btn-sm btn-secondary" @click="changeQantity(-1)">-</button>
-            <span class="input-group-text">{{ localProductNum }}</span>
-            <button class="btn btn-sm btn-secondary" @click="changeQantity(1)">+</button>
-        </span>
+    <div class="input-group p-2 align-self-center d-flex flex-nowrap">
+        <button class="btn btn-sm btn-secondary" @click="changeQantity(-1)">-</button>
+        <span class="input-group-text">{{ localProductNum }}</span>
+        <button class="btn btn-sm btn-secondary" @click="changeQantity(1)">+</button>
     </div>
 </template>
 

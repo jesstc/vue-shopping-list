@@ -3,15 +3,17 @@
       <h2>購物車</h2>
       <ul class="list-group">
         <li v-for="item in cart" :key="item.product.id" class="list-group-item d-flex justify-content-between align-items-center">
-          <span class="me-auto p-2 align-self-center">{{ item.product.name }}</span>
-          <CounterBtn 
-            @ChangeNum="changeNum(item.product.id, $event)" 
-            :productNum=item.quantity 
-          />
-          <span class="p-2 align-self-center">
-            <button class="btn btn-sm btn-danger" @click="removeId(item.product.id)">
-              <i class="bi bi-trash"></i>
-            </button>
+          <span class="me-auto align-self-center flex-grow-1">{{ item.product.name }}</span>
+          <span class="align-self-center d-flex">
+            <CounterBtn
+              @ChangeNum="changeNum(item.product.id, $event)" 
+              :productNum=item.quantity 
+            />
+            <span class="align-self-center">
+              <button class="btn btn-md btn-danger" @click="removeId(item.product.id)">
+                <i class="bi bi-trash"></i>
+              </button>
+            </span>
           </span>
         </li>
       </ul>
