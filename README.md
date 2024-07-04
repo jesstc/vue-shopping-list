@@ -10,7 +10,7 @@ This is a one-page system, including the product list and shopping cart. The act
 
 To set up the project, follow these steps:
 
-1. Clone the repository:
+### 1. Clone the repository:
 
    ```bash
    git clone https://github.com/jesstc/vue-shopping-list.git
@@ -18,21 +18,21 @@ To set up the project, follow these steps:
    ```
 
 
-2. Install dependencies:
+### 2. Install dependencies:
 
   ```bash
    npm install
    ```
 
 
-3. Compiles and Hot-reloads for Development
+### 3. Compiles and Hot-reloads for Development
 
 To start the development server with hot-reload enabled, run:
   ```bash
    npm run serve
    ```
 
-4. Compiles and Minifies for Production
+### 4. Compiles and Minifies for Production
 
 To build the project for production, run:
   ```bash
