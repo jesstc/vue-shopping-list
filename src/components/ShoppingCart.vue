@@ -4,7 +4,7 @@
       <ul class="list-group">
         <li v-for="item in cart" :key="item.product.id" class="list-group-item d-flex justify-content-between align-items-center">
           <b class="me-auto align-self-center flex-grow-1 text-secondary">{{ item.product.name }}</b>
-          <span class="align-self-center me-auto">${{ item.product.price*item.quantity }}</span>
+          <span class="align-self-center">${{ item.product.price*item.quantity }}</span>
           <br>
           <span class="align-self-center d-flex">
             <CounterBtn
