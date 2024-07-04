@@ -49,7 +49,7 @@
       };
 
       const handleImageError = (event) => {
-        event.target.src = require('@/assets/images/logo.png');
+        event.target.src = require('@/assets/logo.png');
       };
 
       const changeNum = (id, newNum) => {
