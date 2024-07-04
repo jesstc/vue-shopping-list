@@ -11,9 +11,9 @@
                 團購主： {{ product.owner }}
                 <br><br>
                 <span class="badge text-bg-danger">團購價：${{ product.price }} </span>
-                <CounterBtn @ChangeNum="changeNum" :productNum=initial_counts[index] />
+                <CounterBtn @ChangeNum="changeNum(product.id, $event)" :productNum=initial_counts[index] />
               </p>
-              <button class="btn btn-primary" @click="addToCart(product)">
+              <button class="btn btn-primary" @click="addToCart(product, initial_counts[index])">
                 <i class="bi bi-cart"></i> 加入購物車
               </button>
             </div>
@@ -26,7 +26,7 @@
   <script>
 
   import CounterBtn from './CounterBtn.vue';
-  import { toRefs, defineComponent, reactive, watch } from 'vue';
+  import { toRefs, defineComponent, reactive } from 'vue';
   
   export default defineComponent({
     components: {
@@ -38,16 +38,12 @@
     },
     setup (props, { emit }) {
       const { products } = toRefs(props);
-      const initial_counts = reactive(new Array(products.value.length).fill(0));
+      const initial_counts = reactive(new Array(products.value.length).fill(1));
 
-      const changeNum = (newNum) => {
+      const changeNum = (id, newNum) => {
         initial_counts.values = newNum;
-        emit("ProductNumChange", newNum)
+        emit("ProductNumChange", { id, newNum});
       }
-
-      watch(initial_counts, (newVal) => {
-        initial_counts.values = newVal;
-      });
 
       return {
         initial_counts,
