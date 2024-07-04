@@ -1,10 +1,12 @@
-### Shopping List System
+## Shopping List System
 This is a one-page system, including the product list and shopping cart. The actions include: 
 1. Add a certain number of item to the shopping cart.
 2. Update the number of item in the shopping cart by clicking '-' and '+'.
 3. Remove the item from the shopping cart by clicking delete button.
 
-### Project Setup
+
+
+## Project Setup
 
 To set up the project, follow these steps:
 
@@ -33,7 +35,8 @@ To build the project for production, run:
 The compiled files will be output to the `dist` directory.
 
 
-### Additional Information
+
+## Additional Information
 For more details on Vue 3 and its Composition API, refer to the [official documentation](https://v3.vuejs.org/).
 
 For questions or feedback, please contact [7jesstc1999@gmail.com].
