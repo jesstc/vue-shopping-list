@@ -12,7 +12,7 @@
       <div class="col-md-4">
         <ShoppingCart 
           :cart="cart"
-          :removeFromCart="removeFromCart"
+          @RemoveId="removeFromCart"
           @CartNumChange="handleCartNumChange"
         />
       </div>
@@ -52,7 +52,8 @@ export default {
     };
 
     const removeFromCart = (productId) => {
-      cart.values = cart.filter(item => item.product.id !== productId);
+      const index = cart.findIndex(item => item.product.id === productId);
+      cart.splice(index, 1);
     };
 
     const handleProductNumChange = (updatedCount) => {

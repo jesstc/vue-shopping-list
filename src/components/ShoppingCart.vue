@@ -9,7 +9,7 @@
             :productNum=item.quantity 
           />
           <span class="p-2 align-self-center">
-            <button class="btn btn-sm btn-danger" @click="removeFromCart(item.product.id)">
+            <button class="btn btn-sm btn-danger" @click="removeId(item.product.id)">
               <i class="bi bi-trash"></i>
             </button>
           </span>
@@ -28,16 +28,20 @@
     },
     props: {
       cart: Array,
-      removeFromCart: Function,
     },
     setup (props, { emit }) {
 
       const changeNum = (id, newNum) => {
-        emit("CartNumChange", { id, newNum })
+        emit("CartNumChange", { id, newNum });
+      }
+
+      const removeId = (id) => {
+        emit("RemoveId", id );
       }
 
       return {
         changeNum,
+        removeId,
       }
     },
   });
